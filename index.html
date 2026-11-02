@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joel Emmanuel Wanyerah – IT student and survey officer</title>
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2F6;--surface:#FFFFFF;--ink:#12263A;--muted:#52667A;--line:#C9D4DF;--accent:#1B5FAA;--gold:#E0A100;--red:#C8102E;--tick:#1E7A4C;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A26;--surface:#162434;--ink:#E8EEF4;--muted:#9FB1C3;--line:#2A3E52;--accent:#6AAEF0;--gold:#F2C230;--red:#FF6B7F;--tick:#5FD39A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1A26;--surface:#162434;--ink:#E8EEF4;--muted:#9FB1C3;--line:#2A3E52;--accent:#6AAEF0;--gold:#F2C230;--red:#FF6B7F;--tick:#5FD39A;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+.flag{height:6px;background:linear-gradient(90deg,#111 0 20%,var(--gold) 20% 40%,var(--red) 40% 60%,#111 60% 80%,var(--gold) 80% 100%)}
+nav{display:flex;gap:6px 20px;flex-wrap:wrap;padding:18px 0;font-weight:500;font-size:15px}
+nav a{color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-color:var(--gold)}
+.hero{padding:34px 0 64px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero h1{font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-.03em}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:34ch;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+.form{background:var(--surface);border:2px solid var(--ink);border-radius:6px;padding:20px 22px;box-shadow:8px 8px 0 var(--gold)}
+.form h2{font-size:15px;font-family:"Instrument Sans",sans-serif;font-weight:600;color:var(--muted);padding-bottom:10px;border-bottom:1px dashed var(--line);margin-bottom:6px}
+.q{padding:11px 0;border-bottom:1px dashed var(--line)}
+.q:last-child{border:0}
+.q small{display:block;color:var(--muted);font-size:13px}
+.opts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:4px;font-weight:500}
+.opt{display:flex;align-items:center;gap:8px}
+.box{width:20px;height:20px;border:2px solid var(--ink);border-radius:4px;position:relative;flex:none}
+.opt.on .box::after{content:"";position:absolute;left:5px;top:0;width:6px;height:12px;border:solid var(--tick);border-width:0 3px 3px 0;transform:rotate(45deg) scale(0);transform-origin:center;animation:tick .35s cubic-bezier(.3,1.6,.5,1) forwards;animation-delay:var(--d,0s)}
+@keyframes tick{to{transform:rotate(45deg) scale(1)}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 30px;max-width:60ch}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.about p{margin:0 0 14px}
+.stats{display:grid;gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.stat b{font:800 30px/1 "Bricolage Grotesque",sans-serif;display:block}
+.stat span{color:var(--muted);font-size:15px}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px solid var(--ink)}
+.tl li{position:relative;padding:0 0 30px 6px}
+.tl li::before{content:"";position:absolute;left:-31px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.tl li.now::before{background:var(--gold)}
+.tl time{font-weight:600;color:var(--accent);font-size:15px}
+.tl h3{font-size:22px;margin:2px 0 4px}
+.tl p{margin:0;color:var(--muted);max-width:62ch}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.chart .head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chart .head b{font:700 20px "Bricolage Grotesque",sans-serif}
+.row{display:grid;grid-template-columns:minmax(120px,230px) 1fr 34px;gap:12px;align-items:center;padding:6px 0;font-size:15px}
+.bar{height:12px;background:var(--bg);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:6px}
+.row em{font-style:normal;font-weight:600;text-align:right}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.skill{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:6px 12px 12px 6px;padding:18px 20px}
+.skill h3{font-size:20px;margin-bottom:6px}
+.skill p{margin:0;color:var(--muted);font-size:16px}
+.contact{background:var(--ink);color:var(--bg)}
+.contact .sub{color:inherit;opacity:.8}
+.contact a{color:var(--gold);font:700 clamp(22px,4.5vw,36px) "Bricolage Grotesque",sans-serif;word-break:break-all}
+.contact .links{display:grid;gap:12px}
+footer{padding:26px 0;color:var(--muted);font-size:14px}
+@media (max-width:760px){.hero,.about{grid-template-columns:1fr}.row{grid-template-columns:1fr 34px}.row .bar{grid-column:1/-1;grid-row:2}.form{box-shadow:6px 6px 0 var(--gold)}}
+.hero{position:relative;isolation:isolate}
+.orbs{position:absolute;inset:-30px;overflow:hidden;pointer-events:none;z-index:-1}
+.orbs i{position:absolute;border-radius:50%;filter:blur(44px);opacity:.38;animation:float 12s ease-in-out infinite alternate}
+.orbs i:nth-child(1){width:240px;height:240px;background:var(--gold);top:-10px;left:-30px}
+.orbs i:nth-child(2){width:210px;height:210px;background:var(--accent);right:0;top:30%;animation-delay:-4s}
+.orbs i:nth-child(3){width:170px;height:170px;background:var(--red);bottom:0;left:38%;animation-delay:-8s}
+@keyframes float{to{transform:translate(50px,-34px) scale(1.25)}}
+.w{display:inline-block;white-space:nowrap}
+.js .ch{display:inline-block;opacity:0;transform:translateY(70%) rotate(8deg);animation:rise .8s cubic-bezier(.2,.9,.3,1.2) forwards;animation-delay:calc(var(--i)*40ms + 150ms)}
+@keyframes rise{to{opacity:1;transform:none}}
+.typed{color:var(--accent);font-weight:600}
+.typed::after{content:"";display:inline-block;width:2px;height:1em;background:var(--gold);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.form{transition:transform .2s ease-out;will-change:transform}
+.ticker{overflow:hidden;background:var(--ink);color:var(--bg);padding:14px 0;transform:rotate(-1.2deg);margin:6px -10px 24px}
+.track{display:flex;width:max-content;animation:slide 30s linear infinite}
+.track span{padding:0 22px;font:700 20px "Bricolage Grotesque",sans-serif;white-space:nowrap}
+.track span::after{content:"\2726";margin-left:44px;color:var(--gold)}
+@keyframes slide{to{transform:translateX(-50%)}}
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .bar i{transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--k)*70ms)}
+.js .chart.in .bar i{transform:none}
+.skill{transition:transform .2s,box-shadow .2s}
+.skill:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:6px 6px 0 var(--gold)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.opt.on .box::after{animation:none;transform:rotate(45deg) scale(1)}.btn,.skill,.form{transition:none}.js .ch{animation:none;opacity:1;transform:none}.js .reveal{opacity:1;transform:none;transition:none}.js .bar i{transform:none;transition:none}.track,.orbs i,.typed::after{animation:none}}
+</style>
+</head>
+<body>
+<div class="flag" aria-hidden="true"></div>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+
+<header class="hero"><div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div>
+    <h1>Joel Emmanuel Wanyerah</h1>
+    <p class="lead">I’m a <strong class="typed"><span id="typed">survey officer</span></strong> in Kampala, collecting national data and learning to build the systems that store it.</p>
+    <div class="btns"><a class="btn primary" href="#contact">Get in touch</a><a class="btn" href="https://github.com/joe005555" target="_blank" rel="noopener">See my GitHub</a></div>
+  </div>
+  <aside class="form" aria-label="Profile summary">
+    <h2>Profile form · completed</h2>
+    <div class="q"><small>Current role</small><div class="opts"><span class="opt on" style="--d:.4s"><span class="box"></span>Survey officer</span><span class="opt"><span class="box"></span>Other</span></div></div>
+    <div class="q"><small>Studying</small><div class="opts"><span class="opt on" style="--d:.8s"><span class="box"></span>Diploma in IT</span><span class="opt"><span class="box"></span>Not studying</span></div></div>
+    <div class="q"><small>Languages</small><div class="opts"><span class="opt on" style="--d:1.2s"><span class="box"></span>English</span><span class="opt on" style="--d:1.5s"><span class="box"></span>Luganda</span></div></div>
+    <div class="q"><small>Based in</small><div class="opts"><span class="opt on" style="--d:1.9s"><span class="box"></span>Kampala, Uganda</span></div></div>
+  </aside>
+</header>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="track"><span>Data collection</span><span>Databases</span><span>Web design</span><span>Systems analysis</span><span>Networking</span><span>Object-oriented programming</span><span>Research</span></div></div>
+
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <p class="sub">Data work and IT study, side by side.</p>
+  <div class="about">
+    <div>
+      <p>I work as a survey officer at the Uganda Bureau of Statistics, where I help collect institutional data for the baseline education census. That job taught me how much depends on clean, accurate records.</p>
+      <p>I’m now in my second year of a Diploma in Information Technology at Victoria University. I’m disciplined, quick to learn, and happy working in a team under pressure.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-count="3.48" data-dec="2">3.48</b><span>CGPA, Class II (Credit)</span></div>
+      <div class="stat"><b>Dec 2023</b><span>Started at Uganda Bureau of Statistics</span></div>
+      <div class="stat"><b><span data-count="2" data-dec="0">2</span> languages</b><span>English and Luganda, written and spoken</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <p class="sub">Work I do in the field.</p>
+  <ul class="tl">
+    <li class="now"><time>December 2023 – present</time><h3>Survey Officer, Uganda Bureau of Statistics</h3><p>Kampala, Uganda. I help collect institutional data for the baseline education census, which means careful fieldwork, accurate recording, and meeting data-quality standards.</p></li>
+  </ul>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <p class="sub">From secondary school to a diploma in IT.</p>
+  <ul class="tl">
+    <li class="now"><time>2024 – present</time><h3>Diploma in Information Technology</h3><p>Victoria University, Kampala. Faculty of Science and Technology. CGPA 3.48 after two academic years.</p></li>
+    <li><time>2022 – 2023</time><h3>Uganda Advanced Certificate of Education</h3><p>St. Joseph of Nazareth High School, Katende. Principal pass in Geography, with subsidiary subjects including Computer.</p></li>
+    <li><time>2017 – 2020</time><h3>Uganda Certificate of Education</h3><p>St. Joseph of Nazareth High School, Katende. Passed in Division 1.</p></li>
+    <li><time>2015 – 2016</time><h3>Primary Leaving Examination</h3><p>Nateete Modern Parents School.</p></li>
+  </ul>
+
+  <div class="chart" style="margin-top:12px" role="img" aria-label="Bar chart of grade points per module">
+    <div class="head"><b>Diploma modules by grade points</b><span style="color:var(--muted);font-size:15px">out of 5.0</span></div>
+    <div id="bars"></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <p class="sub">What my coursework and fieldwork have given me so far.</p>
+  <div class="skills">
+    <div class="skill"><h3>Web design</h3><p>Internet technology and web design, plus application development.</p></div>
+    <div class="skill"><h3>Programming</h3><p>Programming fundamentals and object-oriented programming.</p></div>
+    <div class="skill"><h3>Databases</h3><p>Database management systems and database design.</p></div>
+    <div class="skill"><h3>Systems analysis</h3><p>Systems analysis and design, systems administration, networking.</p></div>
+    <div class="skill"><h3>Data collection</h3><p>Field data collection and recording for a national census.</p></div>
+    <div class="skill"><h3>Research and communication</h3><p>Research methods, communication skills, English and Luganda.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Let’s talk</h2>
+  <p class="sub">Open to internships, junior IT roles and data work.</p>
+  <div class="links">
+    <a href="mailto:wanyerahjoel54@gmail.com">wanyerahjoel54@gmail.com</a>
+    <a href="https://github.com/joe005555" target="_blank" rel="noopener">github.com/joe005555</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Joel Emmanuel Wanyerah</div></footer>
+
+<script>
+(function(){
+  var m=[["Information Systems",4.5],["Introduction to ICT",4.5],["Communication Skills",4],["Climate Change and Business Response",4],["Systems Administration",4],["Systems Analysis and Design",4],["Web Design",3.5],["Object Oriented Programming",3.5],["Programming Fundamentals",3.5],["Research Methods",3.5],["Application Development and Database Design",3],["Database Management Systems",3],["Data Communication and Networking",2.5],["Mathematics for IT",2.5]];
+  var h="";
+  m.forEach(function(x,k){h+='<div class="row"><span>'+x[0]+'</span><div class="bar"><i style="--k:'+k+';width:'+(x[1]/5*100)+'%"></i></div><em>'+x[1].toFixed(1)+'</em></div>';});
+  document.getElementById("bars").innerHTML=h;
+})();
+</script>
+<script>
+(function(){
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var h=document.querySelector(".hero h1"),t=h.textContent,n=0;
+h.setAttribute("aria-label",t);h.textContent="";
+t.split(" ").forEach(function(w){var s=document.createElement("span");s.className="w";s.setAttribute("aria-hidden","true");
+w.split("").forEach(function(c){var e=document.createElement("span");e.className="ch";e.style.setProperty("--i",n++);e.textContent=c;s.appendChild(e)});
+h.appendChild(s);h.appendChild(document.createTextNode(" "))});
+var el=document.getElementById("typed"),words=["survey officer","IT student","data collector","database learner"],wi=0,ci=0,del=false;
+function tick(){var w=words[wi];el.textContent=w.slice(0,ci);
+if(!del&&ci===w.length){del=true;return setTimeout(tick,1600)}
+if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+ci+=del?-1:1;setTimeout(tick,del?40:80)}
+if(!rm)setTimeout(tick,900);
+var tr=document.querySelector(".track");tr.innerHTML+=tr.innerHTML;
+function count(s){if(!s||rm)return;var to=+s.dataset.count,d=+s.dataset.dec,st=performance.now();
+(function f(now){var p=Math.min((now-st)/1300,1);s.textContent=(to*(1-Math.pow(1-p,3))).toFixed(d);if(p<1)requestAnimationFrame(f)})(st)}
+if("IntersectionObserver" in window){
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);count(e.target.querySelector("[data-count]"))}})},{threshold:.15});
+document.querySelectorAll("section .wrap>h2,section .wrap>.sub,.about p,.stat,.tl li,.skill,.chart,.links a").forEach(function(x){
+x.classList.add("reveal");x.style.transitionDelay=(Array.prototype.indexOf.call(x.parentNode.children,x)*90)+"ms";io.observe(x)})}
+var f=document.querySelector(".form");
+if(!rm&&matchMedia("(hover:hover)").matches){
+f.addEventListener("mousemove",function(e){var r=f.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;f.style.transform="perspective(700px) rotateY("+(x*10)+"deg) rotateX("+(-y*10)+"deg)"});
+f.addEventListener("mouseleave",function(){f.style.transform=""})}
+})();
+</script>
+</body>
+</html>
